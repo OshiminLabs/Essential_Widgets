@@ -4,6 +4,7 @@ This package is a compilation of widgets maybe useful for some cases when the st
 
 ## Widgets
 
+- [Number Pas.](#number-pad)
 - [Floating Drawer.](#floating-drawer)
 - [Multi Fab.](#multi-fab)
 - [Shadowed.](#shadowed)
@@ -17,6 +18,62 @@ This package is a compilation of widgets maybe useful for some cases when the st
 - Provider (https://pub.dev/packages/provider).
 
 # Usage Examples
+
+## Number Pad
+
+```dart
+import 'package:essential_widgets/widgets/numberPad.dart';
+class NumberPadPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: NumberPad(
+        backIcon: Icon(
+          Icons.backspace,
+        ),
+        formatDisplay: (value) =>
+            (double.tryParse(value) ?? 0).toStringAsFixed(0), // force a number
+        enableOnDone: (value) =>
+            (double.tryParse(value) ?? 0) > 9, //10 for valid input
+        onDone: (value, formatedValue) {
+          Navigator.of(context).pop<String>((double.tryParse(value) ?? 0)
+              .toStringAsFixed(0)); // return a value
+        },
+      ),
+    );
+  }
+}
+
+```
+
+### Params
+| Name                      | Type                 | Description                              |
+|---------------------------|----------------------|------------------------------------------|
+| title                     | Widget               | Define the wiget on top                  |
+| backIcon                  | Color                | Defines the background color             |
+| margin                    | Widget               | Defines the tiles divider                |
+| padding                   | BorderRadiusGeometry | Defines the border radius for the drawer |
+| doneBtnText               |                      |                                          |
+| doneBtnColor              |                      |                                          |
+| backgroundColor           |                      |                                          |
+| borderRadius              |                      |                                          |
+| doneBtnRadius             |                      |                                          |
+| doneBtnBackgroundColor    |                      |                                          |
+| buttonDecoration          |                      |                                          |
+| onUpdate                  |                      |                                          |
+| enableOnDone              |                      |                                          |
+| extraInfos                |                      |                                          |
+| extraInfosPosition        |                      |                                          |
+| formatDisplay             |                      |                                          |
+| doneBtnExtraInfosPosition |                      |                                          |
+| onDone                    |                      |                                          |
+| doneBtnExtraInfos         |                      |                                          |
+
+
+<div style='display:flex; width:100%; justify-content:space-around; margin-bottom:50px'>
+    <img style="margin:20px" height="400" src="https://drive.google.com/uc?export=view&id=1HCSNJqi_U8GXlBU7nPfWaOl3tjJfEkXA"></img>
+    <img style="margin:20px" height="400" src="https://drive.google.com/uc?export=view&id=1H7VEehyO261AF7Iq5Fxl9sIXHhL9jaF8"></img>
+</div>
 
 ## Floating Drawer
 
