@@ -181,13 +181,7 @@ class _NumberPadState extends State<NumberPad> {
       decoration: BoxDecoration(
           color: widget.backgroundColor ?? Color(0xFFFFFFFF),
           borderRadius: widget.borderRadius ?? BorderRadius.zero,
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 20.0,
-              color: Color(0xFF212121),
-              offset: Offset(0.0, 3.0),
-            ),
-          ]),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
