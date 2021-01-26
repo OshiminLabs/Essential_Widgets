@@ -194,7 +194,6 @@ class _NumberPadState extends State<NumberPad> {
           ..._extra[0],
           Expanded(
             child: Container(
-              color: Color(0xFFaeaeae).withOpacity(0.07),
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),
               child: Text(
