@@ -7,3 +7,4 @@ export "widgets/multiFab.dart";
 export "widgets/shadowed.dart";
 export "widgets/slideshow.dart";
 export "widgets/responsive.dart";
+export "widgets/numberPad.dart";
