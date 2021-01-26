@@ -4,7 +4,7 @@ This package is a compilation of widgets maybe useful for some cases when the st
 
 ## Widgets
 
-- [Number Pas.](#number-pad)
+- [Number Pad.](#number-pad)
 - [Floating Drawer.](#floating-drawer)
 - [Multi Fab.](#multi-fab)
 - [Shadowed.](#shadowed)
